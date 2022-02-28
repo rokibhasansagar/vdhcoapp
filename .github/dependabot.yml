@@ -1,0 +1,16 @@
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    target-branch: "snapshot"
+    versioning-strategy: "auto"
+    open-pull-requests-limit: 10
+    rebase-strategy: "auto"
+    labels:
+      - "npm"
+      - "dependencies"
